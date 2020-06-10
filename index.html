@@ -7,15 +7,30 @@
 	<link rel="stylesheet" href="_css/style.css">
 </head>
 <body>
-	<main>
-		<div class="sidebar">
-			<a href="#">Inicio</a>
-			<a href="#">Projetos</a>
-			<a href="#">Nosso time</a>
-			<a href="#">Fale conosco</a>
+	<div class="sidebar">
+		<a class="close">×</a>
+		<a href="">INICIO</a>
+		<a href="">PROJETOS</a>
+		<a href="">SOBRE</a>
+		<a href="">CONTATO</a>
+
+		<div class="sidebar-rodape">
+			<div class="row text-center">
+				<a href="https://instagram.com/medianeiraclothing" style="color: white">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://facebook.com/medianeiraclothing" style="color: white">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="https://wa.me/5553999062125" style="color: white">
+					<i class="fab fa-whatsapp"></i>
+				</a>
+			</div>
 		</div>
+	</div>
+	<main>
 		<section class="menu">
-			<h1>iron<span style="color:  #bd1220;">.</span></h1>
+			<h1 class="h1Menu">iron<span style="color:  #bd1220;">.</span></h1>
 			<a id="menu"><img src="https://image.flaticon.com/icons/svg/545/545705.svg" class="menuIcon" alt=""></a>
 		</section>
 		<section class="bloc_1">
@@ -320,11 +335,34 @@
 	<script>
 		$(document).ready(function(){
 
+			$(window).on('scroll', function() {
+				if($(this).scrollTop() > 100) {
+					$(".menu").css('padding', '10px 160px 10px 80px')
+					.css('box-shadow', '2px 2px 10px #bbb')
+					$(".h1Menu").css('font-size', '22px')
+					$(".menuIcon").css('width','15px')
+				}else{
+					$(".menu").css('padding', '40px 160px 20px 80px')
+					.css('box-shadow', 'none')
+					$(".h1Menu").css('font-size', '42px')
+					$(".menuIcon").css('width','30px')
+				}
+			});
+
 			$("#menu").click(function(){
-				$("main").css('margin-right', '400px')
-				$(".sidebar").css('display', 'flex')
-				$(".sidebar").css('margin-left', '400px')
+				$('.sidebar').css('width', '250px');
+				$('main').css('opacity', '.1')
+
 			})
+			$('.close').click(function(){
+				$('.sidebar').css('width', '0px');
+				$('main').css('opacity', '1')
+			})
+			$('.sidebar').on('mouseleave', function(){
+				$('.sidebar').css('width', '0px');
+				$('main').css('opacity', '1')
+			});
+
 		})
 	</script>
 </body>
