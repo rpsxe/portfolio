@@ -1,0 +1,252 @@
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+	main{					
+		transition: all 0.5s;
+	}
+	mark{
+		background-color: #faf5bb;
+	}
+	h1{
+		color: #bd1220; font-size: 42px;
+	}
+	a{
+		text-decoration: none;
+		outline: 0;
+		color: #bd1220;
+	}
+	.bloc_1	img{
+		filter: grayscale(1);
+	}
+	p{
+		font-size: 14px;
+		line-height: 23px;
+		color: #808080;
+		margin-top: 10px;
+	}
+	.sidebar{
+		width: 100px;
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		transition: all 0.5s;
+	}
+	.menu{
+		max-width: 100%;
+		margin: 40px 160px 20px 80px;			
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.menu h1{
+		font-weight: 300;
+	}
+	.menuIcon{
+		width: 30px;
+		height: 30px;
+	}
+	.bloc_1{
+		display: grid;
+		display: inline-grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+		margin: 30px;
+	}
+
+
+	.bloc_1 h1{
+		font-size: 128px;
+		line-height: 128px;
+	}
+	.borderBottom{
+		border-radius: 0 0 280px 0;
+		max-height: 800px;
+		position: relative;
+		left:-40px;
+		z-index: -999;
+	}
+	.buttonRed{
+		color:  #bd1220;
+		border: 2px solid #bd1220;
+		border-radius: 25px 25px 25px 25px;
+		background-color: transparent;
+		padding: 20px;
+		margin: 40px;
+		outline: 0;
+		cursor: pointer;			
+		transition: all 0.5s;
+	}
+	.buttonRed:hover{
+		background-color: #bd1220;
+		color: white;
+	}
+	.bloc_2{
+		padding: 60px;
+		max-width: 80%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	.bloc_2 .bloc_2_item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+	}
+	.bloc_2 .bloc_2_item .bloc_2_card{
+		border-top: 2px solid #bd1220;
+		padding: 20px;
+		margin: 20px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		transition: all 0.5s;
+	}
+	.bloc_2 h1{
+		color: #bd1220;
+		font-size: 35px;
+		line-height: 42px;
+	}
+	.bloc_2 h4{
+		font-weight: 400;
+		color: #808080;
+	}
+
+	.bloc_2_item > .bloc_2_card:hover{
+		box-shadow: 1px 1px 15px black;
+	}
+
+	.bloc_3{
+		padding: 60px;
+		max-width: 80%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.bloc_3 img{
+		max-width: 500px;
+	}
+	.bloc_3_list{
+		margin: 20px;
+		padding: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;	
+	}
+	.check{
+		width: 20px;
+		height: 20px;
+		margin-right: 15px;
+	}
+	.bloc_4{
+		width: 80%;
+		margin: 0 auto;
+		padding: 40px;
+	}
+	.bloc_4 .bloc_4_item{
+		display: grid;
+		grid-template-columns: 1fr 1fr;	
+	}
+	.midiasSociais{
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+
+	.bloc_5{
+		width: 80%;
+		margin: 0 auto;
+		padding: 40px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.bloc_5 .bloc_5_item{
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.sticky{
+		position: -webkit-sticky;  
+		position: sticky; 
+		top: 0
+	}
+	.bloc_6{
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.bloc_6 > div{
+		padding: 30px; box-shadow: 2px 2px 10px #ddd; margin: 10px;background-color: white;
+		text-align: left;
+	}
+	.bloc_7{
+		padding: 50px;
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+	}
+	.bloc_7 > img{
+		max-width: 100%;
+	}
+
+	.imgZoom{
+		overflow: hidden;
+		height: auto;
+	}
+	.imgZoom img{
+		transform-origin: 50% 65%;
+		transition: transform 5s, filter 3s ease-in-out;
+		width: 100%;
+
+	}
+	.imgZoom:hover img {
+		filter: brightness(100%);
+		transform: scale(3);
+	}
+	.bloc_8{
+		position: relative; 
+		top: 20px;
+		background-color: white;
+		padding: 50px;
+		width: 80%;
+		margin: 0 auto;
+		box-shadow: -2px -2px 10px #bbb;
+		text-align: center;
+	}
+	.bloc_8 > .form{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		padding: 20px;
+
+	}
+
+	.form > input, textarea{
+		outline: 0;
+		resize: vertical;
+		min-height: 30px;
+		border: 1px solid #808080;
+		border-radius: 10px;
+		padding: 10px;
+	}
+	footer{
+		color: white;
+		max-width: 100%;
+		background-color: #3D181C;
+		padding: 60px;
+		z-index: -99999;
+		top: -20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	footer > div > h2{
+		font-weight: 300;
+	}
