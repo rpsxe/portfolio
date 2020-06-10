@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfólio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: 'Roboto', sans-serif;
+		}
+		mark{
+			background-color: #faf5bb;
+		}
+		h1{
+			color: #bd1220; font-size: 42px;
+		}
+		a{
+			text-decoration: none;
+			outline: 0;
+			color: #bd1220;
+		}
+		.bloc_1	img{
+			filter: grayscale(1);
+		}
+		p{
+			font-size: 14px;
+			line-height: 23px;
+			color: #808080;
+			margin-top: 10px;
+		}
+		.menu{
+			max-width: 100%;
+			margin: 40px 160px 20px 80px;			
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.menu h1{
+			font-weight: 300;
+		}
+		.menuIcon{
+			width: 30px;
+			height: 30px;
+		}
+		.bloc_1{
+			display: grid;
+			display: inline-grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+			margin: 30px;
+		}
+
+
+		.bloc_1 h1{
+			font-size: 128px;
+			line-height: 128px;
+		}
+		.borderBottom{
+			border-radius: 0 0 280px 0;
+			max-height: 800px;
+			position: relative;
+			left:-40px;
+			z-index: -999;
+		}
+		.buttonRed{
+			color:  #bd1220;
+			border: 2px solid #bd1220;
+			border-radius: 25px 25px 25px 25px;
+			background-color: transparent;
+			padding: 20px;
+			margin: 40px;
+			outline: 0;
+			cursor: pointer;			
+			transition: all 0.5s;
+		}
+		.buttonRed:hover{
+			background-color: #bd1220;
+			color: white;
+		}
+		.bloc_2{
+			padding: 60px;
+			max-width: 80%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+		}
+		.bloc_2 .bloc_2_item{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+		}
+		.bloc_2 .bloc_2_item .bloc_2_card{
+			border-top: 2px solid #bd1220;
+			padding: 20px;
+			margin: 20px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			transition: all 0.5s;
+		}
+		.bloc_2 h1{
+			color: #bd1220;
+			font-size: 35px;
+			line-height: 42px;
+		}
+		.bloc_2 h4{
+			font-weight: 400;
+			color: #808080;
+		}
+
+		.bloc_2_item > .bloc_2_card:hover{
+			box-shadow: 1px 1px 15px black;
+		}
+
+		.bloc_3{
+			padding: 60px;
+			max-width: 80%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.bloc_3 img{
+			max-width: 500px;
+		}
+		.bloc_3_list{
+			margin: 20px;
+			padding: 20px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;	
+		}
+		.check{
+			width: 20px;
+			height: 20px;
+			margin-right: 15px;
+		}
+		.bloc_4{
+			width: 80%;
+			margin: 0 auto;
+			padding: 40px;
+		}
+		.bloc_4 .bloc_4_item{
+			display: grid;
+			grid-template-columns: 1fr 1fr;	
+		}
+		.midiasSociais{
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+		}
+
+		.bloc_5{
+			width: 80%;
+			margin: 0 auto;
+			padding: 40px;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		.bloc_5 .bloc_5_item{
+			margin-top: 50px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.sticky{
+			position: -webkit-sticky;  
+			position: sticky; 
+			top: 0
+		}
+		.bloc_6{
+			width: 80%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.bloc_6 > div{
+			padding: 30px; box-shadow: 2px 2px 10px #ddd; margin: 10px;background-color: white;
+			text-align: left;
+		}
+		.bloc_7{
+			padding: 50px;
+			width: 80%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 20px;
+		}
+		.bloc_7 > img{
+			max-width: 100%;
+		}
+
+		.imgZoom{
+			overflow: hidden;
+			height: auto;
+		}
+		.imgZoom img{
+			transform-origin: 50% 65%;
+			transition: transform 5s, filter 3s ease-in-out;
+			width: 100%;
+
+		}
+		.imgZoom:hover img {
+			filter: brightness(100%);
+			transform: scale(3);
+		}
+		.bloc_8{
+			padding: 50px;
+			width: 80%;
+			margin: 0 auto;
+			box-shadow: 2px 2px 10px #eee;
+			text-align: center;
+		}
+		.bloc_8 > .form{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="menu">
+			<h1>iron<span style="color:  #bd1220;">.</span></h1>
+			<img src="https://image.flaticon.com/icons/svg/545/545705.svg" class="menuIcon" alt="">
+		</section>
+		<section class="bloc_1">
+			<div>
+				<img src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" class="borderBottom" alt="homem no computador">			
+			</div>
+			<div style="padding: 40px;">
+				<h1 style="position: relative; left: -150px; top: 60px">
+					iron<span style="color: black">.</span><br>STUDIO
+				</h1>
+				<br><br>
+				<br><br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur adipisci quis ipsa, asperiores obcaecati quae! Recusandae ipsum, excepturi explicabo commodi, atque quos non illo ad. Dignissimos repudiandae ducimus quos, officia.</p>
+				<a href="">							
+					<button class="buttonRed">
+						Começar projeto
+					</button>
+				</a>
+			</div>
+		</section>
+		<br><br>
+		<br><br>
+		<section class="bloc_2">
+			<h4>
+				O QUE FAZEMOS
+			</h4>
+			<h1>
+				Somos um verdadeiro canivete suíço,<br>
+				o que você precisa? 
+			</h1>
+			<br><br>
+			<div class="bloc_2_item">
+				<div class="bloc_2_card">
+					<h3>Design</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+				<div class="bloc_2_card">
+					<h3>Development</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+				<div class="bloc_2_card">
+					<h3>eCommerce</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+			</div>
+			<div class="bloc_2_item">
+				<div class="bloc_2_card">
+					<h3>Mobile Apps</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+				<div class="bloc_2_card">
+					<h3>Marketing</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+				<div class="bloc_2_card">
+					<h3>SEO</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat id tenetur reprehenderit est corrupti autem asperiores! Cumque rerum quos non doloribus voluptas aliquid illum eaque ducimus eveniet nihil. Eveniet, accusantium.</p>
+				</div>
+			</div>
+		</section>
+		<section class="bloc_3">
+			<div style="display: flex;align-items: center;">
+				<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="">
+			</div>
+			<div style="margin-left: 110px">
+				<p>IRON.LABS</p>
+				<h1>
+					Quem somos
+				</h1>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa qui minima, praesentium, beatae nam temporibus recusandae magni asperiores fugit. Pariatur temporibus corporis impedit nobis non sit accusantium qui repudiandae aliquam?</p>
+				<div class="bloc_3_list">
+					<div>						
+						<p><img src="_img/check.svg" class="check" alt=""> Design</p>
+						<p><img src="_img/check.svg" class="check" alt=""> Development</p>
+						<p><img src="_img/check.svg" class="check" alt=""> eCommerce</p>
+					</div>
+					<div>
+						<p><img src="_img/check.svg" class="check" alt=""> Mobile Apps</p>
+						<p><img src="_img/check.svg" class="check" alt=""> Marketing</p>
+						<p><img src="_img/check.svg" class="check" alt=""> SEO</p>
+					</div>
+				</div>
+				<a href="/">Fazer orçamento</a>
+			</div>
+		</section>
+		<section class="bloc_4">
+			<p style="margin-top: 100px;">MUITO TALENTO E DEDICAÇÃO</p>
+			<h1>Conheça nosso time</h1>
+			<br>
+			<div class="bloc_4_item">
+				<div>
+					<img src="https://images.unsplash.com/photo-1558959356-4b2c36036b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="width: 100%" alt="">
+					<div style="padding: 40px">
+						<h2>John Doe</h2>
+						<h4 style="color: #bd1220; font-weight: 400">Developer</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime harum vel obcaecati assumenda modi, repudiandae ratione, iste repellendus veritatis quo possimus voluptate, voluptates ullam perferendis optio numquam nam tempore voluptatibus?</p>
+						<br>
+						<img src="https://image.flaticon.com/icons/svg/1384/1384053.svg" class="midiasSociais" alt="">
+						<img src="https://image.flaticon.com/icons/svg/2111/2111463.svg" class="midiasSociais" alt="">
+						<img src="https://image.flaticon.com/icons/svg/2991/2991144.svg" alt="" class="midiasSociais">
+						<img src="https://image.flaticon.com/icons/png/512/733/733585.png" alt="" class="midiasSociais">
+					</div>
+				</div>
+				<div>
+					<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="width: 100%" alt="">
+					<div style="padding: 40px">
+						<h2>John Doe</h2>
+						<h4 style="color: #bd1220; font-weight: 400">Designer</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime harum vel obcaecati assumenda modi, repudiandae ratione, iste repellendus veritatis quo possimus voluptate, voluptates ullam perferendis optio numquam nam tempore voluptatibus?</p>
+						<br>
+						<img src="https://image.flaticon.com/icons/svg/1384/1384053.svg" class="midiasSociais" alt="">
+						<img src="https://image.flaticon.com/icons/svg/2111/2111463.svg" class="midiasSociais" alt="">
+						<img src="https://image.flaticon.com/icons/svg/2991/2991144.svg" alt="" class="midiasSociais">
+						<img src="https://image.flaticon.com/icons/png/512/733/733585.png" alt="" class="midiasSociais">
+					</div>
+				</div>
+			</div>
+		</section>
+		<br><br>
+		<br><br>
+		<section class="bloc_5">
+			<p>NOVOS TRABALHOS</p>
+			<h1 style="text-align: center;">Nós amamos o que fazemos,<br> confira nossos últimos trabalhos</h1>
+			<div class="bloc_5_item">
+				<div>
+					<img src="https://images.unsplash.com/photo-1565229284535-2cbbe3049123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80" style="max-width: 100%" alt="">
+				</div>
+				<div class="sticky" style="margin-left: 80px; padding: 20px; height: 500px">
+					<h2>Projeto Web</h2>
+					<br><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, beatae magni aperiam, aliquam quam saepe. Architecto doloribus est sapiente expedita tempore natus consectetur culpa recusandae temporibus, reprehenderit dolor, eos quae.</p>
+					<br>
+					<a href="/">Ver projeto</a>
+					<div style="padding: 30px; margin-top: 30px; box-shadow: 2px 2px 10px #ddd;">
+						<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+						<br>
+						<div style="display: flex; align-items: center;">							
+							<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+							<div style="display: flex; flex-direction: column;">
+								<h4>John Doe</h4><p>Cliente</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bloc_5_item">
+				<div class="sticky" style="margin-left: 80px; padding: 20px; height: 500px">
+					<h2>Projeto Web</h2>
+					<br><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, beatae magni aperiam, aliquam quam saepe. Architecto doloribus est sapiente expedita tempore natus consectetur culpa recusandae temporibus, reprehenderit dolor, eos quae.</p>
+					<br>
+					<a href="/">Ver projeto</a>
+					<div style="padding: 30px; margin-top: 30px; box-shadow: 2px 2px 10px #ddd;">
+						<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+						<br>
+						<div style="display: flex; align-items: center;">							
+							<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+							<div style="display: flex; flex-direction: column;">
+								<h4>John Doe</h4><p>Cliente</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img src="https://images.unsplash.com/photo-1557898979-252a87810b77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" style="max-width: 100%" alt="">
+				</div>
+				
+			</div>
+			<div class="bloc_5_item">
+				<div>
+					<img src="https://images.unsplash.com/photo-1558181445-eca4774b2a37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1372&q=80" style="max-width: 100%" alt="">
+				</div>
+				<div class="sticky" style="margin-left: 80px; padding: 20px; height: 500px">
+					<h2>Projeto Web</h2>
+					<br><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, beatae magni aperiam, aliquam quam saepe. Architecto doloribus est sapiente expedita tempore natus consectetur culpa recusandae temporibus, reprehenderit dolor, eos quae.</p>
+					<br>
+					<a href="/">Ver projeto</a>
+					<div style="padding: 30px; margin-top: 30px; box-shadow: 2px 2px 10px #ddd;">
+						<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+						<br>
+						<div style="display: flex; align-items: center; ">							
+							<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+							<div style="display: flex; flex-direction: column;">
+								<h4>John Doe</h4><p>Cliente</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style="padding: 80px; text-align: center; margin-top: 100px; background-color: #f8f9fa">
+			<p>DEPOIMENTOS</p>
+			<h1>O que nossos clientes tem a falar</h1>
+			<div class="bloc_6" style="margin-top: 60px;">
+				<div>
+					<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+					<br>
+					<div style="display: flex; align-items: center; ">							
+						<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+						<div style="display: flex; flex-direction: column;">
+							<h4>John Doe</h4><p>Cliente</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+					<br>
+					<div style="display: flex; align-items: center; ">							
+						<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+						<div style="display: flex; flex-direction: column;">
+							<h4>John Doe</h4><p>Cliente</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bloc_6">
+				<div>
+					<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+					<br>
+					<div style="display: flex; align-items: center; ">							
+						<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+						<div style="display: flex; flex-direction: column;">
+							<h4>John Doe</h4><p>Cliente</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p style="font-style: italic;">Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Consequatur expedita nisi doloribus in debitis, obcaecati, molestiae iure inventore ipsa fugiat</mark>, dicta ad tempore ea! Recusandae, earum rem ducimus velit doloribus!</p>
+					<br>
+					<div style="display: flex; align-items: center; ">							
+						<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" style="width: 100px; border-radius: 50%; margin-right: 20px;" alt="">
+						<div style="display: flex; flex-direction: column;">
+							<h4>John Doe</h4><p>Cliente</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bloc_7" style="margin-top: 40px;">
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/photo-1552391744-77952f0cd6c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+			</div>	
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/photo-1538139124289-12f9cbd4d167?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+			</div>
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/photo-1557825835-74a0a4f14a52?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+			</div>
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/photo-1557825835-495b8f089eb6?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+			</div>
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/1/iphone-4-closeup.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+			</div>
+			<div class="imgZoom">
+				<img src="https://images.unsplash.com/photo-1578589336586-d224dce2f553?ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
+			</div>
+		</section>
+		<br><br>
+		<br><br>
+		<section class="bloc_8">
+			<p>FALE COM A GENTE</p>
+			<h1>Contato</h1>
+			<div class="form">
+				<input type="text">
+				<input type="text">
+			</div>
+		</section>
+<br><br>
+	</main>
+</body>
+</html>
